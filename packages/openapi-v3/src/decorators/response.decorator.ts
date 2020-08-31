@@ -20,6 +20,7 @@ interface ResponseWithContent extends ResponseObject {
 }
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function isResponseObject(c: any): c is ResponseWithContent {
+  // eslint-disable-next-line no-prototype-builtins
   return !!c?.hasOwnProperty('content') && !!c.content;
 }
 

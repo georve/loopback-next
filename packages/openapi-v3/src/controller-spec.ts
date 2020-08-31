@@ -363,6 +363,7 @@ function processSchemaExtensions(
    *  You cannot provide BOTH a defnintion AND one of these keywords.
    */
   /* istanbul ignore else */
+  // eslint-disable-next-line no-prototype-builtins
   const hasOwn = (prop: string) => schema?.hasOwnProperty(prop);
 
   if (SCHEMA_ARR_KEYS.some(k => hasOwn(k))) {
